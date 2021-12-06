@@ -1,0 +1,32 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(476px + 64px); 
+    width: calc(476px + 64px);
+    gap: 10px;
+    background-color: white;
+}
+
+.custom {
+    top: 1rem;
+    right: 40rem;
+}
+
+body {
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#index {
+    background-position: unset;
+}
+
+#modal-title-id {
+    margin-left: 32%;
+}
+
+.modalMod {
+    height: 250px;
+}

@@ -1,0 +1,53 @@
+body {
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    border:solid rgb(175, 107, 107);
+
+}
+
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    width: 468px;
+    height: 468px;
+}
+
+#\31  {
+    border-radius: 10px 0px 0px 0px;
+}
+
+#\33 {
+    border-radius: 0px 10px 0px 0px;
+}
+
+#\37 {
+    border-radius: 0px 0px 0px 10px;
+}
+
+#\39 {
+    border-radius: 0px 0px 10px 0px;
+}
+
+.mole {
+    background-image: url(../images/mole.png);
+    background-size: cover;
+}
+
+#modal-title-id {
+    margin-left: 32%;
+}
+
+.modalMod {
+    height: 250px;
+}
+
+
+

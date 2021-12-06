@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Game</title>
+    <title>Whack A Mole</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="style/whack.css"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <script src="script/memory.js" charset="utf-8"></script>
 </head>
-<body>    
+<body id="index">
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <div class="container my-3">
             <a href="index.html" class="navbar-brand">Children Games</a>
@@ -24,34 +23,38 @@
                         <a href="index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link active" aria-current="page">Memory Game</a>
+                        <a href="memoryGame.html" class="nav-link">Memory Game</a>
                     </li>
                     <li class="nav-item">
-                        <a href="whackAMole.html" class="nav-link">Whack A Mole</a>
+                        <a href="#" class="nav-link active" aria-current="page">Whack A Mole</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="position-relative">
-        <div class="container my-4 col-4 mx-auto position-absolute custom">
-            <div id="test" class="text-center"></div>
+    <section>
+        <div class="container mt-5 mb-3 font-monospace">
+            <h1 class="text-center text-decoration-underline">Whack A Mole</h1>
+            <div class="container my-5 d-flex justify-content-center">
+                <h2 class="text-center me-5">Score:<span id="score" class="ms-2">0</span></h2>
+                <div class="text-center h2 ms-5">Time left:<span id="time-left" class="ms-2">60</span></div>
+            </div>
         </div>
     </section>
 
     <section>
-        <div class="container my-5 d-flex justify-content-center">
-            <h3 class="text-center me-5">Score:<span id="result" class="ms-2"></span></h3>
-            <div class="text-center h3 ms-5">Counts:<span id="count" class="ms-2"></span></div>
-            <button class="btn btn-secondary position-absolute d-none" style="top: 19%;" onclick="restart()" id="restartBtn">Restart <i class="bi bi-arrow-repeat"></i></button>
-        </div>
-    </section>
-    
-    <section>
-        <div class="container my-5 p-2">
-            <div class="grid mx-auto border border-3 border-dark rounded p-3">
-
+        <div class="container my-5">
+            <div class="grid mx-auto">
+                <div class="square" id="1"></div>
+                <div class="square" id="2"></div>
+                <div class="square" id="3"></div>
+                <div class="square" id="4"></div>
+                <div class="square" id="5"></div>
+                <div class="square" id="6"></div>
+                <div class="square" id="7"></div>
+                <div class="square" id="8"></div>
+                <div class="square" id="9"></div>
             </div>
         </div>
     </section>
@@ -61,17 +64,18 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content modalMod">
                 <div class="modal-header bg-light">
-                    <h5 class="modal-title text-secondary" id="modal-title-id">Congratulation!!!</h5>
+                    <h5 class="modal-title text-secondary" id="modal-title-id">GAME OVER!</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body fw-bold d-flex m-auto align-items-center text-dark" id="modal-body-id"></div>
                 <div class="modal-footer bg-light">
-                    <button type="button" class="btn btn-secondary m-auto" id="action-button-id" onclick="restart()">Restart Game <i class="bi bi-arrow-repeat"></i></button>
+                    <button type="button" class="btn btn-secondary m-auto" id="action-button-id" onclick="document.location.reload()">Restart Game <i class="bi bi-arrow-repeat"></i></button>
                 </div>
             </div>
         </div>
     </div>
 
     <footer class="p-3 bg-dark text-white text-center fixed-bottom">COPYRIGHT&copy; Children Games 2021 | Built with love</footer>
+    <script src="script/whack.js" charset="utf-8"></script>
 </body>
 </html>

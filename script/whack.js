@@ -1,4 +1,4 @@
-const square = document.querySelectorAll('.square');
+const squares = document.querySelectorAll('.square');
 const mole = document.querySelector('.mole');
 const timeLeft = document.querySelector('#time-left');
 let score = document.querySelector('#score');
@@ -11,31 +11,52 @@ function showModal (description) {
 
 let result = 0;
 let currentTime = timeLeft.textContent;
+let timerId = null;
+let lastPosition;
 
 function randomSquare() {
-    square.forEach(className => {
+    squares.forEach(className => {
         className.classList.remove('mole');
     });
-    let randomPosition = square[Math.floor(Math.random() * 9)];
-    randomPosition.classList.add('mole');
 
+    const idx = Math.floor(Math.random() * 9);
+    let randomPosition = squares[idx];
+
+    if(randomPosition === lastPosition) {
+        return randomSquare();
+    }
+
+    lastPosition = randomPosition;
+    randomPosition.classList.add('mole');
+    
     //asign the id of the randomPosition to hitPosition
     hitPosition = randomPosition.id;
 }
 
-square.forEach(id => {
+squares.forEach(id => {
     id.addEventListener('mouseup', () => {
         if(id.id === hitPosition) {
-            result = result + 1;
+            result++;
             score.textContent = result;
+            id.classList.remove('mole');
+            if(currentTime === 0) {
+                id.classList.add('mole');
+                id.classList.add('none');
+                result--;
+                score.textContent = result;
+            }
         }
     });
 });
 
 
+
 function moveMole() {
-    let timerId = null;
-    timerId = setInterval(randomSquare, 1000);
+    //fixed time
+    // timerId = setInterval(randomSquare, 1000);
+
+    //random time
+    timerId = setInterval(randomSquare,randomTime(1200,2500));
 }
 
 moveMole();
@@ -45,12 +66,18 @@ function countDown() {
     timeLeft.textContent = currentTime;
 
     if(currentTime === 0) {
+        clearInterval(countDownTimerId);
         clearInterval(timerId);
         showModal(`Congratulations! Your final score is  ${result}`);
     }
 }
 
-let timerId = setInterval(countDown, 1000);
+let countDownTimerId = setInterval(countDown, 1000);
+
+function randomTime(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+}
+
 
 
 

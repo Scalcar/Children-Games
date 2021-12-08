@@ -7,10 +7,10 @@
     background-color: white;
 }
 
-.custom {
+/* .custom {
     top: 1rem;
     right: 40rem;
-}
+} */
 
 body {
     background-image: url(../images/background.png);
@@ -29,4 +29,18 @@ body {
 
 .modalMod {
     height: 250px;
+}
+
+.none {
+    pointer-events: none;
+}
+
+.custom {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.custom2 {
+    top: 20%;
+    transform: translateY(-20%);
 }

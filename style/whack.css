@@ -39,6 +39,7 @@ body {
 .mole {
     background-image: url(../images/mole.png);
     background-size: cover;
+    cursor: pointer;
 }
 
 #modal-title-id {
@@ -48,6 +49,11 @@ body {
 .modalMod {
     height: 250px;
 }
+
+.none {
+    pointer-events: none;
+}
+
 
 
 

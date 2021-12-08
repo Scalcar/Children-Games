@@ -200,30 +200,34 @@ document.addEventListener('DOMContentLoaded', () => {
             cardsWon.push(cardsChosen);
             showModal('Congratulations! You found them all!');
             document.getElementById('restartBtn').classList.remove('d-none');
-        } else if (cardsChosen[0] === cardsChosen[1]) {
+        } else if (cardsChosen[0] === cardsChosen[1] && cardsChosenId[0] !== cardsChosenId[1]) {
             alert('You found a match.','success');
-            setTimeout(closeAlert, 1500);
+            setTimeout(closeAlert, 1200);
+
             // if you want the cards to disappear
             // cards[optionOneId].setAttribute('src', 'images/white.png');
             // cards[optionTwoId].setAttribute('src', 'images/white.png');
+
             cardsWon.push(cardsChosen);
+
+            // cards stay
             cards[optionOneId].setAttribute('style', 'pointer-events: none');
             cards[optionTwoId].setAttribute('style', 'pointer-events: none');
             grid.setAttribute('style', 'pointer-events: unset');
         } else {
             cards[optionOneId].setAttribute('src', 'images/pokeball.png');
+            cards[optionOneId].removeAttribute('style');
+
             cards[optionTwoId].setAttribute('src', 'images/pokeball.png');
+            cards[optionTwoId].removeAttribute('style');
+
             alert('Sorry. Try again!', 'danger');
-            setTimeout(closeAlert, 1500);
+            setTimeout(closeAlert, 1200);
             grid.setAttribute('style', 'pointer-events: unset');
         }
         cardsChosen = [];
         cardsChosenId = [];
         resultDisplay.textContent = cardsWon.length;
-        // if (cardsWon.length === decks.length/2) {
-        //     resultDisplay.textContent = 'Congratulations! You found them all!';
-        //     showModal('Congratulations! You found them all!');
-        // }
     }
 
 
@@ -233,7 +237,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let count = document.querySelector('#count');
         cardsChosen.push(decks[cardId].name);
         cardsChosenId.push(cardId);
+       
         this.setAttribute('src', decks[cardId].img);
+        this.setAttribute('style','pointer-events: none');
         if (cardsChosen.length === 2) {
             cardCount.push('clicked');
             grid.setAttribute('style', 'pointer-events: none');
@@ -241,7 +247,6 @@ document.addEventListener('DOMContentLoaded', () => {
             count.textContent = cardCount.length;
         }
     }
-
 
     createBoard();
     

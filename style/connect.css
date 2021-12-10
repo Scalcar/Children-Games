@@ -1,0 +1,41 @@
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+.game {
+    width: 600px;
+    height: calc(540px + 25px);
+    border: 1px solid black;
+    box-shadow: 8px 8px rgba(0, 0, 0, 0.441);
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.slot {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: unset;
+    border-spacing: 5px;
+}
+
+.stop {
+    pointer-events: none;
+}
+
+#modal-title-id {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+

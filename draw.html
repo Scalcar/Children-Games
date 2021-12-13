@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Children Games</title>
+    <title>Draw Game</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="style/draw.css"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
-<body id="index">
+<body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <div class="container my-3">
-            <a href="#" class="navbar-brand">Children Games</a>
+            <a href="index.html" class="navbar-brand">Children Games</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="navbar-item">
-                        <a href="#" class="nav-link active" aria-current="page">Home</a>
+                        <a href="index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="memoryGame.html" class="nav-link">Memory Game</a>
@@ -32,18 +32,46 @@
                         <a href="connectFour.html" class="nav-link">Connect Four</a>
                     </li>
                     <li class="nav-item">
-                        <a href="draw.html" class="nav-link">Draw Game</a>
+                        <a href="#" class="nav-link active" aria-current="page">Draw Game</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    
+    <section>
+        <div class="container my-4">
+            <h3 class="text-center" id="">Current Color: <span id="current-color" class="ms-2">black</span></h3>
+        </div>
+    </section>
 
+    <section class="text-center">
+        <button class="btn btn-secondary mx-auto" id="reset">Reset <i class="bi bi-arrow-repeat"></i></button>
+    </section>
 
+    <section class="text-center my-4">
+        <p>Choose color:</p>
+        <button class="btn btn-large border border-dark" id="black" onclick="setColor()">Black</button>
+        <button class="btn btn-large border border-dark mx-3" id="white" onclick="setColor()">white</button>
+        <button class="btn btn-large border border-dark" id="red" onclick="setColor()">Red</button>
+        <button class="btn btn-large border border-dark mx-3" id="yellow" onclick="setColor()">Yellow</button>
+        <button class="btn btn-large border border-dark" id="blue" onclick="setColor()">Blue</button>
+        <button class="btn btn-large border border-dark mx-3" id="green" onclick="setColor()">Green</button>
+        <button class="btn btn-large border border-dark" id="pink" onclick="setColor()">Pink</button>
+        <button class="btn btn-large border border-dark mx-3" id="brown" onclick="setColor()">Brown</button>
+        <button class="btn btn-large border border-dark" id="orange" onclick="setColor()">Orange</button>
+    </section>
+
+    <section>
+        <div class="mx-auto my-5">
+            <table class="mx-auto" id="grid">
+                
+
+            </table>
+        </div>
+    </section>
 
     <footer class="p-3 bg-dark text-white text-center fixed-bottom">COPYRIGHT&copy; Children Games 2021 | Built with love</footer>
-    
+    <script src="script/draw.js"></script>
 </body>
 </html>

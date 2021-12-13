@@ -155,6 +155,50 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'nidoking',
             img: 'images/nidoking.png'
+        },
+        {
+            name: 'clefable',
+            img: 'images/clefable.png'
+        },
+        {
+            name: 'clefairy',
+            img: 'images/clefairy.png'
+        },
+        {
+            name: 'gloom',
+            img: 'images/gloom.png'
+        },
+        {
+            name: 'golbat',
+            img: 'images/golbat.png'
+        },
+        {
+            name: 'jigglypuff',
+            img: 'images/jigglypuff.png'
+        },
+        {
+            name: 'ninetales',
+            img: 'images/ninetales.png'
+        },
+        {
+            name: 'oddish',
+            img: 'images/oddish.png'
+        },
+        {
+            name: 'vileplume',
+            img: 'images/vileplume'
+        },
+        {
+            name: 'vulpix',
+            img: 'images/vulpix.png'
+        },
+        {
+            name: 'wigglytuff',
+            img: 'images/wigglytuff.png'
+        },
+        {
+            name: 'zubat',
+            img: 'images/zubat.png'
         }
     ];
 

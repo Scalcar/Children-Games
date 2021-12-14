@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: 'vileplume',
-            img: 'images/vileplume'
+            img: 'images/vileplume.png'
         },
         {
             name: 'vulpix',

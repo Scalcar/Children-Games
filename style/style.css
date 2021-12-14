@@ -17,6 +17,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #index {
@@ -43,4 +45,25 @@ body {
 .custom2 {
     top: 20%;
     transform: translateY(-20%);
+}
+
+#canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px 0 #999;
+}
+
+.bi-dot {
+    animation: fall linear forwards;
+    color: rgba(189, 195, 199, 1);
+    position: absolute;
+    top: -10px;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(105vh);
+    }
 }

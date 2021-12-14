@@ -40,7 +40,7 @@ for(i = 0;i < 20; i++) {
 for(let i = 0; i < tableCell.length; i++) {
     tableCell[i].addEventListener('click', (e) => {
         console.log(`${e.target.parentElement.rowIndex}, ${e.target.cellIndex}`);
-    })
+    });
 }
 
 Array.prototype.forEach.call(tableCell, (cell) => {

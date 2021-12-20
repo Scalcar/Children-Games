@@ -49,7 +49,7 @@ function createSnowFlake() {
     snow_flake.style.animationDuration = Math.random() * 3 + 3 + 's';
     snow_flake.style.opacity = Math.random();
     snow_flake.style.size = Math.random() * 10 + 10 + 'px';
-    snow_flake.style.transform = 'rotate(180deg)';
+    snow_flake.style.transform = 'rotate(360deg)';
 
     document.body.appendChild(snow_flake);
 

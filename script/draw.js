@@ -49,13 +49,13 @@ Array.prototype.forEach.call(tableCell, (cell) => {
 });
 
 function changeColor(e) {
-    e.path[0].style.backgroundColor = color.innerHTML;
+    e.target.style.backgroundColor = color.innerHTML;
 }
 
 function setColor() {
     btn.forEach( (item) => {
         item.addEventListener('click', (i)=> {
-            switch (i.path[0].id) {
+            switch (i.target.id) {
                 case 'black':
                     color.innerHTML = 'black';
                     color.style.color = 'black';

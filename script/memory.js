@@ -199,7 +199,63 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'zubat',
             img: 'images/zubat.png'
-        }
+        },
+        {
+            name: 'arcanine',
+            img: 'images/arcanine.png'
+        },
+        {
+            name: 'diglett',
+            img: 'images/diglett.png'
+        },
+        {
+            name: 'dugtrio',
+            img: 'images/dugtrio.png'
+        },
+        {
+            name: 'golduck',
+            img: 'images/golduck.png'
+        },
+        {
+            name: 'growlithe',
+            img: 'images/growlithe.png'
+        },
+        {
+            name: 'mankey',
+            img: 'images/mankey.png'
+        },
+        {
+            name: 'meowth',
+            img: 'images/meowth.png'
+        },
+        {
+            name: 'paras',
+            img: 'images/paras.png'
+        },
+        {
+            name: 'parasect',
+            img: 'images/parasect.png'
+        },
+        {
+            name: 'persian',
+            img: 'images/persian.png'
+        },
+        {
+            name: 'primeape',
+            img: 'images/primeape.png'
+        },
+        {
+            name: 'psyduck',
+            img: 'images/psyduck.png'
+        },
+        {
+            name: 'venomoth',
+            img: 'images/venomoth.png'
+        },
+        {
+            name: 'venonat',
+            img: 'images/venonat.png'
+        }  
     ];
 
     const pickCards = cardArray

@@ -53,3 +53,16 @@ body {
     pointer-events: none;
 }
 
+.animation {
+    opacity: 0.1;
+    animation: win 3s ease-in infinite;
+}
+
+@keyframes win {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}

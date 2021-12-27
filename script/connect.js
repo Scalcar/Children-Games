@@ -78,7 +78,9 @@ function changeColor(e) {
 }
 
 function colorMatchCheck(one,two,three,four) {
-    return (one === two && one === three && one === four && one !== 'white');
+    if (one === two && one === three && one === four && one !== 'white') {
+        return true;
+    }
 }
 
 function horizontalCheck() {

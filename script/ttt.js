@@ -40,6 +40,7 @@ function mark(e) {
             winner.textContent = 'Player one is the winner!';
             winner.classList.add('text-danger');
             board.classList.add('none');
+            // console.log(tableCell);
             return (showModal('Player one wins the game!'));
         }else if (drawCheck()) {
             winner.textContent = 'Game is a draw!';
@@ -72,6 +73,9 @@ function mark(e) {
 
 function matchCheck(one,two,three) {
     if(one.classList.value == two.classList.value && one.classList.value == three.classList.value && one.classList.value != 'slot') {
+        one.classList.add('animation');
+        two.classList.add('animation');
+        three.classList.add('animation');
         return true;
     }
 }

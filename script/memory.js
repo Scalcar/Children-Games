@@ -255,6 +255,42 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'venonat',
             img: 'images/venonat.png'
+        },
+        {
+            name: 'abra',
+            img: 'images/abra.png'
+        },
+        {
+            name: 'alakazam',
+            img: 'images/alakazam.png'
+        },
+        {
+            name: 'kadabra',
+            img: 'images/kadabra.png'
+        },
+        {
+            name: 'machamp',
+            img: 'images/machamp.png'
+        },
+        {
+            name: 'machoke',
+            img: 'images/machoke.png'
+        },
+        {
+            name: 'machop',
+            img: 'images/machop.png'
+        },
+        {
+            name: 'poliwag',
+            img: 'images/poliwag.png'
+        },
+        {
+            name: 'poliwhirl',
+            img: 'images/poliwhirl.png'
+        },
+        {
+            name: 'poliwrath',
+            img: 'images/poliwrath.png'
         }  
     ];
 

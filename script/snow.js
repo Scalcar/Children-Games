@@ -45,7 +45,7 @@ function createSnowFlake() {
     const snow_flake = document.createElement('i');
     snow_flake.classList.add('bi','bi-dot');
     snow_flake.style.left = Math.random() * window.innerWidth + 'px';
-    //animation time between 2-6s
+    //animation time between 3-6s
     snow_flake.style.animationDuration = Math.random() * 3 + 3 + 's';
     snow_flake.style.opacity = Math.random();
     snow_flake.style.size = Math.random() * 10 + 10 + 'px';
